@@ -1,6 +1,15 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.loren.gestionventasv3.POJO;
 
+/**
+ *
+ * @author profesor
+ */
 public class Comercial {
+    
     private Long id;
     private String nombre;
     private String apellido1;
@@ -8,7 +17,6 @@ public class Comercial {
     private float comision;
 
     public Comercial() {
-        super();
     }
 
     public Comercial(Long id, String nombre, String apellido1, String apellido2, float comision) {

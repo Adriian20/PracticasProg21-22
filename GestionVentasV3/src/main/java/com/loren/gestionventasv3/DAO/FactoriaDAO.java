@@ -1,10 +1,12 @@
 package com.loren.gestionventasv3.DAO;
 
+import com.loren.gestionventasv3.DAO.Pedido.PedidoDAOImpl;
+
 public class FactoriaDAO {
     
     private static ClienteDAO clienteDAO = null;
     private static ComercialDAO comerciaDAO = null;
-    // private static PedidosDAO pedidosDAO = null;
+    private static PedidoDAOImpl pedidoDAO = null;
     
     public static ClienteDAO getClienteDAO(){
         if(clienteDAO == null){
@@ -13,10 +15,18 @@ public class FactoriaDAO {
         return clienteDAO;
     }
     
-    public static ComercialDAO getComercialDAO() {
-        if(comercialDAO == null){
-            ComercialDAO = new ComercialDAO();
+    
+    public static ComercialDAO getComercialDAO(){
+        if(comerciaDAO == null){
+            comerciaDAO = new ComercialDAO();
         }
-        return ComercialDAO;
-    }
+        return comerciaDAO;
+    }    
+    
+    public static PedidoDAOImpl getPedidoDAO(){
+        if(pedidoDAO == null){
+            pedidoDAO = new PedidoDAOImpl();
+        }
+        return pedidoDAO;
+    }      
 }
